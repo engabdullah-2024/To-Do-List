@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gray-100 min-h-screen flex justify-center items-center p-4 sm:p-8">
+    <div class="w-full max-w-md p-4 bg-white rounded-lg shadow-md sm:p-6 lg:p-8">
+        <h2 class="text-2xl font-semibold text-center mb-4 sm:text-3xl">To-Do List</h2>
+
+        <!-- Date Input -->
+        <div class="mb-4">
+            <input type="date" id="taskDate" class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 sm:text-lg">
+        </div>
+
+        <!-- Time Input -->
+        <div class="mb-4">
+            <input type="time" id="taskTime" class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 sm:text-lg">
+        </div>
+
+        <!-- Task Input -->
+        <div class="mb-4">
+            <input type="text" id="taskInput" placeholder="Enter a task..." class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 sm:text-lg">
+        </div>
+
+        <!-- Add Task Button -->
+        <div class="mb-4 text-center">
+            <button id="addTaskButton" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 sm:text-lg">Add Task</button>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="mb-4 text-center space-x-4">
+            <button id="showAllButton" class="px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 sm:text-lg">All</button>
+            <button id="showIncompleteButton" class="px-4 py-2 bg-yellow-400 rounded-lg hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-blue-500 sm:text-lg">Incomplete</button>
+            <button id="showCompleteButton" class="px-4 py-2 bg-green-400 text-white rounded-lg hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-blue-500 sm:text-lg">Complete</button>
+        </div>
+
+        <!-- View Tasks Section -->
+        <div id="taskView" class="mt-4">
+            <h3 class="text-xl font-semibold text-center mb-4 sm:text-2xl">Tasks</h3>
+            <ul id="taskList" class="space-y-2">
+                <!-- Tasks will be appended here -->
+            </ul>
+        </div>
+    </div>    
+
+
+
+    <script src="todo.js"></script>
+</body>
+</html>
